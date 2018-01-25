@@ -19,8 +19,6 @@ use Sonata\DoctrinePHPCRAdminBundle\Admin\Admin;
 use Sonata\DoctrinePHPCRAdminBundle\Admin\FieldDescription;
 use Sonata\DoctrinePHPCRAdminBundle\Builder\ListBuilder;
 use Sonata\DoctrinePHPCRAdminBundle\Model\ModelManager;
-use Symfony\Component\Form\Guess\Guess;
-use Symfony\Component\Form\Guess\TypeGuess;
 
 class ListBuilderTest extends TestCase
 {
