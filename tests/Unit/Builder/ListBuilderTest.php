@@ -103,9 +103,8 @@ class ListBuilderTest extends TestCase
     public function testCorrectFixedActionsFieldType()
     {
         $this->setUpListActionTests();
-
         $this->guesser->expects($this->once())->method('guessType')
-            ->willReturn(new TypeGuess(null, [], Guess::LOW_CONFIDENCE));
+            ->willReturn(null);
 
         $fieldDescription = new FieldDescription();
         $fieldDescription->setName('_action');
