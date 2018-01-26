@@ -28,14 +28,14 @@
         "sonata-project/block-bundle": "^3.11",
         "symfony-cmf/resource-rest-bundle": "^1.0.1",
         "symfony-cmf/tree-browser-bundle": "^2.0",
-        "symfony/config": "^2.8 || ^3.3 || ^4.0",
-        "symfony/dependency-injection": "^2.8 || ^3.3 || ^4.0",
-        "symfony/form": "^2.8 || ^3.3 || ^4.0",
-        "symfony/framework-bundle": "^2.8 || ^3.3 || ^4.0",
-        "symfony/http-foundation": "^2.8 || ^3.3 || ^4.0",
-        "symfony/http-kernel": "^2.8 || ^3.3 || ^4.0",
-        "symfony/options-resolver": "^2.8 || ^3.3 || ^4.0",
-        "symfony/property-access": "^2.8 || ^3.3 || ^4.0"
+        "symfony/config": "^2.8 || ^3.2 || ^4.0",
+        "symfony/dependency-injection": "^2.8 || ^3.2 || ^4.0",
+        "symfony/form": "^2.8 || ^3.2 || ^4.0",
+        "symfony/framework-bundle": "^2.8 || ^3.2 || ^4.0",
+        "symfony/http-foundation": "^2.8 || ^3.2 || ^4.0",
+        "symfony/http-kernel": "^2.8 || ^3.2 || ^4.0",
+        "symfony/options-resolver": "^2.8 || ^3.2 || ^4.0",
+        "symfony/property-access": "^2.8 || ^3.2 || ^4.0"
     },
     "provide": {
         "sonata-project/admin-bundle-persistency-layer": "1.0.0"
