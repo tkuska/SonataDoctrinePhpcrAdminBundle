@@ -69,5 +69,7 @@
         "psr-4": {
             "Sonata\\DoctrinePHPCRAdminBundle\\Tests\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
