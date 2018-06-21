@@ -33,7 +33,6 @@ env:
     - SYMFONY_DEPRECATIONS_HELPER=weak_vendors
     - TARGET=test
     - UPSTREAM_URL=https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle.git
-    - KERNEL_CLASS=Sonata\\DoctrinePHPCRAdminBundle\\Tests\\Fixtures\\App\\Kernel
 
 matrix:
   fast_finish: true
