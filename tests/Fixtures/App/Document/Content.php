@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Resources\Document;
+namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCRODM;
@@ -60,14 +60,14 @@ class Content
     protected $children;
 
     /**
-     * @PHPCRODM\ReferenceOne(targetDocument="Sonata\DoctrinePHPCRAdminBundle\Tests\Resources\Document\Content")
+     * @PHPCRODM\ReferenceOne(targetDocument="Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content")
      *
      * @var Content
      */
     protected $singleRoute;
 
     /**
-     * @PHPCRODM\ReferenceMany(targetDocument="Sonata\DoctrinePHPCRAdminBundle\Tests\Resources\Document\Content")
+     * @PHPCRODM\ReferenceMany(targetDocument="Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content")
      *
      * @var ArrayCollection|Content[]
      */

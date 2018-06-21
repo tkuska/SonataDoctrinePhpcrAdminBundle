@@ -11,9 +11,6 @@
          syntaxCheck="false"
          bootstrap="vendor/symfony-cmf/testing/bootstrap/bootstrap.php"
 >
-    <php>
-        <server name="KERNEL_DIR" value="tests/Resources/app" />
-    </php>
 
     <testsuites>
         <testsuite name="SonataDoctrinePHPCRAdminBundle Unit Test Suite">

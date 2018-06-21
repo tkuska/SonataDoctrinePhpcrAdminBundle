@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Resources\Admin;
+namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Admin;
 
 use Doctrine\Bundle\PHPCRBundle\Form\DataTransformer\DocumentToPathTransformer;
 use Doctrine\Common\Persistence\ManagerRegistry;
@@ -18,7 +18,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\DoctrinePHPCRAdminBundle\Admin\Admin;
-use Sonata\DoctrinePHPCRAdminBundle\Tests\Resources\Document\Content;
+use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content;
 
 /**
  * @author Maximilian Berghoff <Maximilian.Berghoff@mayflower.de>
@@ -124,7 +124,7 @@ class ContentAdmin extends Admin
                 'Sonata\AdminBundle\Form\Type\ModelType',
                 [
                     'property' => 'title',
-                    'class' => 'Sonata\DoctrinePHPCRAdminBundle\Tests\Resources\Document\Content',
+                    'class' => 'Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content',
                     'btn_catalogue' => 'List',
                     'required' => false,
                 ],
