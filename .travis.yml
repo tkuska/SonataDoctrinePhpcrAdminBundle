@@ -15,7 +15,6 @@ php:
   - nightly
 
 sudo: false
-dist: trusty
 
 addons:
   apt:

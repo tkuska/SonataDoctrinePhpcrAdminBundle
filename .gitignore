@@ -2,6 +2,7 @@
 /docs/_build
 /vendor
 .php_cs.cache
+.phpunit
 composer.lock
 phpunit.xml
 tests/Fixtures/App/var/cache/
