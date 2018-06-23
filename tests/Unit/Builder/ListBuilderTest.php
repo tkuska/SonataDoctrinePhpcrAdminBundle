@@ -138,7 +138,7 @@ class ListBuilderTest extends TestCase
             ->with($this->anything())
             ->will($this->returnValue(true));
 
-        $this->admin = $this->createMock('\Sonata\AdminBundle\Admin\Admin', [], [], '', false);
+        $this->admin = $this->createMock(Admin::class, [], [], '', false);
         $this->admin->expects($this->atLeastOnce())->method('getModelManager')
             ->willReturn($this->modelManager);
 

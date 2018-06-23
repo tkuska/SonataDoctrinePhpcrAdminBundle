@@ -18,9 +18,8 @@
         </testsuite>
 
         <!-- SonataDoctrinePHPCRAdminBundle Integration Test Suite – The name has to be "phpcr" to trigger db listener.-->
-        <testsuite name="phpcr">
+        <testsuite name="SonataDoctrinePHPCRAdminBundle Web Test Suite with PHPCR">
             <directory>./tests/WebTest</directory>
-            <directory>./Tests</directory>
         </testsuite>
     </testsuites>
 
@@ -30,18 +29,13 @@
             <exclude>
                 <directory>./tests</directory>
                 <directory>./vendor</directory>
-                <directory>./Resources</directory>
-                <directory>./DependencyInjection</directory>
-                <file>./SonataDoctrinePHPCRAdminBundle.php</file>
+                <directory>./src/Resources</directory>
+                <directory>./src/DependencyInjection</directory>
+                <file>./src/SonataDoctrinePHPCRAdminBundle.php</file>
                 <directory>./coverage/</directory>
             </exclude>
         </whitelist>
     </filter>
-
-    <listeners>
-        <listener class="Symfony\Cmf\Component\Testing\Phpunit\DatabaseTestListener" />
-    </listeners>
-
     <php>
         <ini name="precision" value="8"/>
     </php>
