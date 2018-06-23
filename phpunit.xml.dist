@@ -13,12 +13,8 @@
 >
 
     <testsuites>
-        <testsuite name="SonataDoctrinePHPCRAdminBundle Unit Test Suite">
+        <testsuite name="SonataDoctrinePHPCRAdminBundle Test Suite">
             <directory>./tests/Unit</directory>
-        </testsuite>
-
-        <!-- SonataDoctrinePHPCRAdminBundle Integration Test Suite – The name has to be "phpcr" to trigger db listener.-->
-        <testsuite name="SonataDoctrinePHPCRAdminBundle Web Test Suite with PHPCR">
             <directory>./tests/WebTest</directory>
         </testsuite>
     </testsuites>
