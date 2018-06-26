@@ -11,6 +11,7 @@
 
 namespace Sonata\DoctrinePHPCRAdminBundle\Tests\WebTest\Dashboard;
 
+use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\DataFixtures\Phpcr\LoadTreeData;
 use Symfony\Cmf\Component\Testing\Functional\BaseTestCase;
 
 /**
@@ -20,7 +21,7 @@ class TreeBrowserTest extends BaseTestCase
 {
     public function setUp()
     {
-        $this->db('PHPCR')->loadFixtures(['Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\DataFixtures\Phpcr\LoadTreeData']);
+        $this->db('PHPCR')->loadFixtures([LoadTreeData::class]);
         $this->client = $this->createClient();
     }
 
