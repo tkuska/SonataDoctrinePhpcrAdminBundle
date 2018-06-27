@@ -11,11 +11,11 @@
 
 namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Unit\Datagrid;
 
+use Doctrine\ODM\PHPCR\DocumentManager;
 use Doctrine\ODM\PHPCR\Query\Builder\QueryBuilder;
+use Doctrine\ODM\PHPCR\Query\Query;
 use PHPUnit\Framework\TestCase;
 use Sonata\DoctrinePHPCRAdminBundle\Datagrid\ProxyQuery;
-use Doctrine\ODM\PHPCR\Query\Query;
-use Doctrine\ODM\PHPCR\DocumentManager;
 
 class ProxyQueryTest extends TestCase
 {

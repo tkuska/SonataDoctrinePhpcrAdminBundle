@@ -13,6 +13,7 @@ namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Unit\Builder;
 
 use Doctrine\ODM\PHPCR\Mapping\ClassMetadata;
 use PHPUnit\Framework\TestCase;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Admin\FieldDescriptionCollection;
 use Sonata\AdminBundle\Admin\FieldDescriptionInterface;
 use Sonata\AdminBundle\Guesser\TypeGuesserInterface;
@@ -21,7 +22,6 @@ use Sonata\DoctrinePHPCRAdminBundle\Admin\FieldDescription;
 use Sonata\DoctrinePHPCRAdminBundle\Builder\ListBuilder;
 use Sonata\DoctrinePHPCRAdminBundle\Model\ModelManager;
 use Symfony\Component\Form\Guess\TypeGuess;
-use Sonata\AdminBundle\Admin\AbstractAdmin;
 
 class ListBuilderTest extends TestCase
 {
