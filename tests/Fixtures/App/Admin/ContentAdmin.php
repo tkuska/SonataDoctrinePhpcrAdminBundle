@@ -19,6 +19,11 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\DoctrinePHPCRAdminBundle\Admin\Admin;
 use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Sonata\CoreBundle\Form\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Sonata\AdminBundle\Form\Type\ModelType;
+use Symfony\Cmf\Bundle\TreeBrowserBundle\Form\Type\TreeSelectType;
 
 /**
  * @author Maximilian Berghoff <Maximilian.Berghoff@mayflower.de>
@@ -96,15 +101,15 @@ class ContentAdmin extends Admin
     {
         $formMapper
             ->with('form.group_general')
-            ->add('name', 'Symfony\Component\Form\Extension\Core\Type\TextType')
-            ->add('title', 'Symfony\Component\Form\Extension\Core\Type\TextType')
+            ->add('name', TextType::class)
+            ->add('title', TextType::class)
             ->add(
                 'children',
-                'Sonata\CoreBundle\Form\Type\CollectionType',
+                CollectionType::class,
                 ['label' => false, 'type_options' => [
                     'delete' => true,
                     'delete_options' => [
-                        'type' => 'Symfony\Component\Form\Extension\Core\Type\CheckboxType',
+                        'type' => CheckboxType::class,
                         'type_options' => ['required' => false, 'mapped' => false],
                     ], ],
                 ],
@@ -112,25 +117,27 @@ class ContentAdmin extends Admin
             )
             ->add(
                 'routes',
-                'Sonata\AdminBundle\Form\Type\ModelType',
+                ModelType::class,
                 ['property' => 'title', 'multiple' => true, 'expanded' => false]
             )
-            ->add('parentDocument', 'Symfony\Cmf\Bundle\TreeBrowserBundle\Form\Type\TreeSelectType', [
+            ->add('parentDocument',
+                  TreeSelectType::class, [
                 'widget' => 'browser',
                 'root_node' => $this->getRootPath(),
             ])
             ->add(
                 'child',
-                'Sonata\AdminBundle\Form\Type\ModelType',
+                ModelType::class,
                 [
                     'property' => 'title',
-                    'class' => 'Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content',
+                    'class' => Content::class,
                     'btn_catalogue' => 'List',
                     'required' => false,
                 ],
                 ['admin_code' => 'sonata_admin_doctrine_phpcr.test.admin']
             )
-            ->add('singleRoute', 'Symfony\Cmf\Bundle\TreeBrowserBundle\Form\Type\TreeSelectType', [
+            ->add('singleRoute',
+                  TreeSelectType::class, [
                 'widget' => 'browser',
                 'root_node' => $this->getRootPath(),
             ])
