@@ -51,21 +51,8 @@ cs-fix-xml:
 	done
 .PHONY: cs-fix-xml
 
-TESTING_SCRIPTS_DIR=vendor/symfony-cmf/testing/bin
-CONSOLE=${TESTING_SCRIPTS_DIR}/console
-export SYMFONY_PHPUNIT_DIR=.phpunit
-export SYMFONY_PHPUNIT_REMOVE="symfony/yaml"
-export KERNEL_CLASS=Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Kernel
-export SYMFONY_PHPUNIT_VERSION=5.7
-
 test:
-	@if [ "${CONSOLE}" = "" ]; then echo "Console executable missing"; exit 1; fi
-	@echo
-	@echo '+++ create PHPCR +++'
-	@${CONSOLE} doctrine:phpcr:init:dbal --drop --force
-	@${CONSOLE} doctrine:phpcr:repository:init
-	./vendor/bin/simple-phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml
-	@${CONSOLE} doctrine:database:drop --force
+	phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml
 .PHONY: test
 
 docs:

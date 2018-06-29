@@ -34,6 +34,7 @@
     </filter>
     <php>
         <ini name="precision" value="8"/>
+        <env name="TEST_CLASS'KERNEL_CLASS">Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Kernel</env>
     </php>
 
 </phpunit>
