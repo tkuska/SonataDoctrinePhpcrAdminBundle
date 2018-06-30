@@ -11,14 +11,14 @@
 
 namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Unit\Guesser;
 
+use Doctrine\Bundle\PHPCRBundle\ManagerRegistry;
+use Doctrine\Common\Persistence\Mapping\ClassMetadata;
+use Doctrine\ODM\PHPCR\DocumentRepository;
 use PHPUnit\Framework\TestCase;
 use Sonata\DoctrinePHPCRAdminBundle\Guesser\FilterTypeGuesser;
-use Symfony\Component\Form\Guess\Guess;
-use Doctrine\Bundle\PHPCRBundle\ManagerRegistry;
-use Doctrine\ODM\PHPCR\DocumentRepository;
-use Doctrine\Common\Persistence\Mapping\ClassMetadata;
-use Symfony\Component\Form\Guess\TypeGuess;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Guess\Guess;
+use Symfony\Component\Form\Guess\TypeGuess;
 
 class FilterTypeGuesserTest extends TestCase
 {

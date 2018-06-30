@@ -12,9 +12,9 @@
 namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Unit\Route;
 
 use PHPUnit\Framework\TestCase;
-use Sonata\DoctrinePHPCRAdminBundle\Route\PathInfoBuilderSlashes;
-use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
+use Sonata\AdminBundle\Route\RouteCollection;
+use Sonata\DoctrinePHPCRAdminBundle\Route\PathInfoBuilderSlashes;
 
 class PathInfoBuilderSlashesTest extends TestCase
 {
