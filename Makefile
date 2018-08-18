@@ -51,6 +51,7 @@ cs-fix-xml:
 	done
 .PHONY: cs-fix-xml
 
+export KERNEL_CLASS="Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Kernel"
 test:
 	phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml
 .PHONY: test
