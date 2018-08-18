@@ -14,7 +14,7 @@ namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\DataFixtures\Phpcr;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use PHPCR\Util\NodeHelper;
-use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\PHPCR\Content;
+use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content;
 
 class LoadTreeData implements FixtureInterface
 {

@@ -24,7 +24,7 @@ class ContentAdminTest extends BaseTestCase
 
     public function testContentList()
     {
-        $crawler = $this->client->request('GET', '/admin/fixtures/app/phpcr-content/list');
+        $crawler = $this->client->request('GET', '/admin/fixtures/app/content/list');
         $res = $this->client->getResponse();
 
         $this->assertResponseSuccess($res);
@@ -33,7 +33,7 @@ class ContentAdminTest extends BaseTestCase
 
     public function testContentWithChildEdit()
     {
-        $crawler = $this->client->request('GET', '/admin/fixtures/app/phpcr-content/test/content/content-1/edit');
+        $crawler = $this->client->request('GET', '/admin/fixtures/app/content/test/content/content-1/edit');
         $res = $this->client->getResponse();
 
         $this->assertResponseSuccess($res);
@@ -50,7 +50,7 @@ class ContentAdminTest extends BaseTestCase
 
     public function testContentWithChildrenEdit()
     {
-        $crawler = $this->client->request('GET', '/admin/fixtures/app/phpcr-content/test/content/content-2/edit');
+        $crawler = $this->client->request('GET', '/admin/fixtures/app/content/test/content/content-2/edit');
         $res = $this->client->getResponse();
 
         $this->assertResponseSuccess($res);
@@ -64,7 +64,7 @@ class ContentAdminTest extends BaseTestCase
 
     public function testContentCreate()
     {
-        $crawler = $this->client->request('GET', '/admin/fixtures/app/phpcr-content/create');
+        $crawler = $this->client->request('GET', '/admin/fixtures/app/content/create');
         $res = $this->client->getResponse();
         $this->assertResponseSuccess($res);
 
@@ -87,7 +87,7 @@ class ContentAdminTest extends BaseTestCase
 
     public function testShowContent()
     {
-        $crawler = $this->client->request('GET', '/admin/fixtures/app/phpcr-content/test/content/content-1/show');
+        $crawler = $this->client->request('GET', '/admin/fixtures/app/content/test/content/content-1/show');
         $res = $this->client->getResponse();
 
         if (200 !== $res->getStatusCode()) {
