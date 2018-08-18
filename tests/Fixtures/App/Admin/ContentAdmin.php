@@ -18,7 +18,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\DoctrinePHPCRAdminBundle\Admin\Admin;
-use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\Content;
+use Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Document\PHPCR\Content;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Sonata\CoreBundle\Form\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
