@@ -20,9 +20,12 @@ class Kernel extends TestKernel
     {
         $this->registerConfiguredBundles();
         $this->requireBundleSet('default');
-        $this->requireBundleSets([
-            'phpcr_odm',
-        ]);
+        $this->requireBundleSets(['phpcr_odm',]);
+    }
+
+    public function getRootDir()
+    {
+        return __DIR__;
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

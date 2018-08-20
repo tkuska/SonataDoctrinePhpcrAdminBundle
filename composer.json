@@ -35,7 +35,8 @@
         "symfony/http-foundation": "^2.8 || ^3.2 || ^4.0",
         "symfony/http-kernel": "^2.8 || ^3.2 || ^4.0",
         "symfony/options-resolver": "^2.8 || ^3.2 || ^4.0",
-        "symfony/property-access": "^2.8 || ^3.2 || ^4.0"
+        "symfony/property-access": "^2.8 || ^3.2 || ^4.0",
+        "symfony/symfony": "^3.4"
     },
     "provide": {
         "sonata-project/admin-bundle-persistency-layer": "1.0.0"
