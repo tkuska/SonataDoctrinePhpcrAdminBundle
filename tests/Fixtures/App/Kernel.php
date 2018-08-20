@@ -11,6 +11,7 @@
 
 namespace Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App;
 
+use ReflectionClass;
 use Symfony\Cmf\Component\Testing\HttpKernel\TestKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -23,9 +24,14 @@ class Kernel extends TestKernel
         $this->requireBundleSets(['phpcr_odm',]);
     }
 
-    public function getRootDir()
+    public function getKernelDir()
     {
-        return __DIR__;
+        $refl = new ReflectionClass($this);
+        $fname = $refl->getFileName();
+        $kernelDir = dirname($fname);
+        var_dump('KERNEL_DIR:'.PHP_EOL);
+var_dump($kernelDir);
+        return $kernelDir;
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

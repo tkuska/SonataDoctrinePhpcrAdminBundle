@@ -34,7 +34,6 @@ env:
     - PATH="$HOME/.local/bin:$PATH"
     - SYMFONY_DEPRECATIONS_HELPER=weak_vendors
     - TARGET=test
-    - KENEL_CLASS=Sonata\DoctrinePHPCRAdminBundle\Tests\Fixtures\App\Kernel
     - UPSTREAM_URL=https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle.git
 
 matrix:
