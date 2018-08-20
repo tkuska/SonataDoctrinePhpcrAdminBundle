@@ -29,8 +29,8 @@ class Kernel extends TestKernel
         $refl = new ReflectionClass($this);
         $fname = $refl->getFileName();
         $kernelDir = dirname($fname);
-        var_dump('KERNEL_DIR:'.PHP_EOL);
-var_dump($kernelDir);
+        var_dump('KERNEL_DIR:'.PHP_EOL.$kernelDir);
+        var_dump('KERNEL_CLASS:'.PHP_EOL.getenv('KERNEL_CLASS');
         return $kernelDir;
     }
 
