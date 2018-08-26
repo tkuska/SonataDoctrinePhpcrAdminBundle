@@ -26,13 +26,15 @@ class Kernel extends TestKernel
 
     public function getKernelDir()
     {
-        $refl = new ReflectionClass($this);
-        $fname = $refl->getFileName();
-        $kernelDir = dirname($fname);
-        var_dump('KERNEL_DIR_CREATED:'.PHP_EOL.$kernelDir);
-        var_dump('KERNEL_DIR:'.PHP_EOL.getenv('KERNEL_CLASS'));
-        var_dump('KERNEL_DIR:'.PHP_EOL.getenv('KERNEL_DIR'));
-        return $kernelDir;
+        try {
+            $refl = new ReflectionClass($this);
+            $fname = $refl->getFileName();
+            $kernelDir = dirname($fname);
+
+            return $kernelDir;
+        } catch (Execption $exception) {
+
+        }
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
