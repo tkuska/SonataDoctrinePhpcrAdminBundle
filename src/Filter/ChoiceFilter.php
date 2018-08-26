@@ -39,7 +39,7 @@ class ChoiceFilter extends Filter
         }
 
         // if values not set or "all" specified, do not do this filter
-        if (!$values || in_array('all', $values, true)) {
+        if (!$values || \in_array('all', $values, true)) {
             return;
         }
 
