@@ -145,7 +145,7 @@ class ListBuilder implements ListBuilderInterface
             throw new \RuntimeException(sprintf(
                 'Please define a type for field `%s` in `%s`',
                 $fieldDescription->getName(),
-                get_class($admin)
+                \get_class($admin)
             ));
         }
 
