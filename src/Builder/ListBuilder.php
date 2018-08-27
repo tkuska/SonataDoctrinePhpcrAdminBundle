@@ -189,7 +189,7 @@ class ListBuilder implements ListBuilderInterface
 
         if ($metadata
             && $metadata->hasAssociation($fieldDescription->getName())
-            && \in_array($fieldDescription->getMappingType(), $mappingTypes)
+            && \in_array($fieldDescription->getMappingType(), $mappingTypes, true)
         ) {
             $admin->attachAdminClass($fieldDescription);
         }
