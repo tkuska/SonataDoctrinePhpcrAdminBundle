@@ -80,7 +80,7 @@ class ProxyQuery implements ProxyQueryInterface
      */
     public function __construct(QueryBuilder $queryBuilder, $alias)
     {
-        if (!is_string($alias) || '' === $alias) {
+        if (!\is_string($alias) || '' === $alias) {
             throw new \InvalidArgumentException('$alias must be a non empty string');
         }
 
@@ -98,7 +98,7 @@ class ProxyQuery implements ProxyQueryInterface
      */
     public function __call($name, $args)
     {
-        return call_user_func_array([$this->qb, $name], $args);
+        return \call_user_func_array([$this->qb, $name], $args);
     }
 
     /**
